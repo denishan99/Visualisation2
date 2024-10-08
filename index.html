@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+  
+  <title>Vega-Lite Chart</title>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- CSS file -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+  
+</head>
+<body>
+    <div class="page">
+            <div class="pure-u-1">
+                <div class="header">
+                    <h1>World Food Dynamics</h1>
+                    <h2>Global Insights and Australia's Role</h2>
+                    <hr>
+
+
+                </div>
+        </div>
+
+        <div class="container">
+            <img src="Img/logo.png" alt="logo" />
+            <p class="text-block">
+              This dashboard provides a comprehensive overview of global<br>
+              food production trends, illustrating the dynamics and variations<br>
+              across different countries. It emphasizes Australia’s vital role<br>
+              in the agricultural sector, showcasing its contributions to<br>
+              the global food supply and production. Users can explore<br>
+              data across multiple years to understand trends and impacts.
+            </p>
+          </div>
+        
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <div id="symbol_map"></div>
+            </div>
+        </div>
+        <div class="pure-u-1">
+            <div class="header">
+                <h3>Australia's Food Production</h3>
+                <hr>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <div id="Donut_Chart"></div>
+            </div>
+        </div>
+        <div class="pure-u-1">
+            <div class="header">
+                <h3>Australia's Food Consumption</h3>
+                <hr>
+            </div>
+        </div>
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <div id="emoji_chart"></div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+    <script type="text/javascript">
+
+    var spec2 = "js/world_food_production.vega";
+    vegaEmbed('#symbol_map', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec2 = "js/Donut_Chart.vega";
+    vegaEmbed('#Donut_Chart', spec2).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    var spec3 = "js/bar_chart.vega";
+    vegaEmbed('#bar_chart', spec3).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    var spec4 = "js/Chord Diagram.vega";
+    vegaEmbed('#Chord_diagram', spec4).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    var spec5 = "js/Bar_Chart2.vega";
+    vegaEmbed('#emoji_chart', spec5).then(function(result) {
+        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    </script>
+    
+
+</body>
+</html>
